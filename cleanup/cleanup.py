@@ -12,5 +12,6 @@ else:
 
 os.remove(f"{temp}i.jpg")
 os.remove(f"{temp}config.json")
+os.remove(f"{temp}key.key")
 os.remove("./decrypt.html")
 print("\n\nCleanup complete! Make sure to delete this file as well as the ransomware file.")    
