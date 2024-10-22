@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Document</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                background-color: black;
+            }
+
+            #e {
+                background-color: red;
+                color: white;
+                text-align: center;
+                border-radius: 50px;
+                position: absolute;
+                top: 5%;
+                left: 0%;
+                width: 100%;
+                height: fit-content;
+            }
+        </style>
+        <script type="application/javascript">
+            setTimeout(main, 1200)
+            function main() {
+                const audio = document.getElementById("a");
+                const code = prompt("Please enter your personal encryption ID:");
+                if(code === null || code === "" || code === undefined) {
+                    alert("Error, you must enter a non-blank encryption ID.");
+                    main();
+                };
+                document.addEventListener("keydown", event => {
+                    if(event.key.toLowerCase() === "r") {
+                        audio.play()
+                        audio.addEventListener("ended", () => {
+                            document.getElementById("e").innerHTML = `Your decryption code is: ${atob(code)}`;
+                        });
+                    };
+                });
+            };
+        </script>
+    </head>
+    <body>
+        <h1 id="e">To decrypt your files, you must enter a decryption key in to the ransomware program.<br>To get this key, you must watch a full RickRoll video.<br>Click the web page and press "R" to start.</h1>
+        <audio id="a">
+            <source src="https://eli-sterken.github.io/Garden-Times/hawkfrost/song.MP3" type="audio/mpeg">
+        </audio>
+    </body>
+</html>
