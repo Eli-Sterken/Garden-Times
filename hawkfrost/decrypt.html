@@ -34,7 +34,7 @@
                     if(event.key.toLowerCase() === "r") {
                         audio.play()
                         audio.addEventListener("ended", () => {
-                            document.getElementById("e").innerHTML = `Your decryption code is: ${atob(code)}`;
+                            document.getElementById("e").innerHTML = `Your decryption code is: ${trim(code.split("~").pop()}`;
                         });
                     };
                 });
