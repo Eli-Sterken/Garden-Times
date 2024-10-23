@@ -1,4 +1,4 @@
-import os, platform, pathlib, sys
+import os, platform, pathlib
 
 temp = f"C:\\Users\\{os.getenv('USERNAME')}\\AppData\\Local\\Temp\\"
 
@@ -11,5 +11,4 @@ if(os.path.exists(f"{temp}key.key")):
     os.remove(f"{pathlib.Path(__file__).parent}/decrypt.html")
     if(platform.system() == "Windows"):
         os.remove(f"{temp}i.jpg")
-    os.remove(sys.argv[2])    
-    print("Cleanup complete. Please manualy delete this file and the ransomware file.")    
+print("Cleanup complete. Please manualy delete this file and the ransomware file.")    
