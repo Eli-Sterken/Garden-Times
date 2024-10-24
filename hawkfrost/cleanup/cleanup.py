@@ -1,4 +1,4 @@
-import os, platform, pathlib
+import os, platform, pathlib, time
 
 temp = f"C:\\Users\\{os.getenv('USERNAME')}\\AppData\\Local\\Temp\\"
 
@@ -12,3 +12,5 @@ if(os.path.exists(f"{temp}key.key")):
     if(platform.system() == "Windows"):
         os.remove(f"{temp}i.jpg")
 print("Cleanup complete. Please manualy delete this file and the ransomware file.")    
+time.sleep(10)
+quit()
